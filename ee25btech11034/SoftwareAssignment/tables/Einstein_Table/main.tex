@@ -1,0 +1,36 @@
+\documentclass[11pt, a4paper]{article}
+
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2cm, right=2cm]{geometry}
+
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{float}
+
+\newcommand{\imageplaceholder}[2]{%
+  \framebox{\parbox{#1}{%
+    \centering
+    \vspace{1cm}
+    \ttfamily #2
+    \vspace{1cm}
+  }}%
+}
+
+\begin{document}
+\begin{table}[H]
+    \centering
+    \caption{Einstein: k and Frobenius Norm}
+    \label{tab:frob_norm}
+    \begin{tabular}{ll ll ll}
+        \toprule
+        \textbf{k} & \textbf{Froebius Norm} & \textbf{k} & \textbf{Froebius Norm} & \textbf{k} & \textbf{Froebius Norm} \\
+        \midrule
+        5   & 4713.58   & 50  & 880.5    & 100 & 164.78 \\
+        10  & 3249.15   & 60  & 655.06   & 120 & 63.07  \\
+        20  & 2126.56   & 80  & 348.01   & 140 & 17.44  \\
+        30  & 1568.77   &     &          & 182 & 0.00   \\
+        40  & 1163.79   &     &          &     &        \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+\end{document}
