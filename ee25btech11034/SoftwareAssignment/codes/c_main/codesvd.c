@@ -428,7 +428,7 @@ int write_image(const char*filename,int width,int height,double*pixel_matrix){
         result=stbi_write_png(filename,width,height,1,img_data,width);
     }
     else if(strcmp(ext,".jpg")==0||strcmp(ext,".JPG")==0||strcmp(ext,".jpeg")==0||strcmp(ext,".JPEG")==0){
-        result=stbi_write_jpg(filename,width,height,1,img_data,90); // 90 = quality
+        result=stbi_write_jpg(filename,width,height,1,img_data,45);
     }
     else{
         printf("Warning: Unknown extension '%s'. Using PNG format.\n",ext);
@@ -447,15 +447,14 @@ int write_image(const char*filename,int width,int height,double*pixel_matrix){
 }
 
 int main(){
-    char ip_fname[1024];
-    char op_fname[1024];
+    char ip_fname[]="../../figs/globe.jpg";
+    char op_fname[]="../../figs/globe150.jpg";
     int k;
-    printf("Enter the input image path: ");
-    scanf("%s",ip_fname);
-
-    printf("Enter output image path: ");
-    fflush(stdout); // Force the prompt to display
-    scanf("%1023s", op_fname);
+    // printf("Enter the input image path: ");
+    // scanf("%s",ip_fname);
+    // printf("Enter output image path: ");
+    // fflush(stdout); // Force the prompt to display
+    // scanf("%1023s", op_fname);
 
     printf("Enter k value: ");
     fflush(stdout); // Force the prompt to display
